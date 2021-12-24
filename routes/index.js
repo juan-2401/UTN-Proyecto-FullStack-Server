@@ -19,9 +19,8 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
   const msg = {
     to: 'no.reply.240191@gmail.com', // Change to your recipient
     from: 'no.reply.240191@gmail.com', // Change to your verified sender
-    subject: body.data.nombre,
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    subject: `${body.data.nombre} te ha enviado un mail`,
+    text: `${contactForm.nombre} te envió el siguiente mensaje: ${contactForm.mensaje}. Contactalo a su teléfono ${contactForm.telefono} o a su email ${contactForm.email}.`,
   }
 
   sgMail
