@@ -20,7 +20,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     to: 'no.reply.240191@gmail.com', // Change to your recipient
     from: 'no.reply.240191@gmail.com', // Change to your verified sender
     subject: `${body.data.nombre} te ha enviado un mail`,
-    text: `${contactForm.nombre} te envió el siguiente mensaje: ${contactForm.mensaje}. Contactalo a su teléfono ${contactForm.telefono} o a su email ${contactForm.email}.`,
+    text: `${body.data.nombre} te envió el siguiente mensaje: ${body.data.mensaje}. Contactalo a su teléfono ${body.data.telefono} o a su email ${body.data.email}.`,
   }
 
   sgMail
